@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import "./Navbar.css";
 
-
 export default function Navbar() {
   const [darkMode, setDarkMode] = useState(false);
 
@@ -11,6 +10,9 @@ export default function Navbar() {
     if (savedTheme === "dark") {
       setDarkMode(true);
       document.body.classList.add("dark");
+    } else {
+      // Ensure light mode is applied if no theme is saved or if it's explicitly light
+      document.body.classList.remove("dark");
     }
   }, []);
 
@@ -25,15 +27,28 @@ export default function Navbar() {
     }
   }, [darkMode]);
 
+  const handleToggle = () => {
+    setDarkMode(!darkMode);
+  };
+
   return (
     <nav className="navbar">
       <div className="logo">
-      <img src="/weathericon.jpg" alt="" style={{ width: "50px", height: "50px" }} className="logo-img"></img>
-      <h1 className="logo" >ClearSky</h1>
+        <img src="/weathericon.jpg" alt="Weather Icon" className="logo-img" />
+        <h1>ClearSky</h1>
       </div>
-      <button className="toggle-btn" onClick={() => setDarkMode(!darkMode)}>
-        {darkMode ? "☀️" : "🌙"}
-      </button>
+      <label className="theme-toggle" htmlFor="theme-checkbox">
+        <input
+          type="checkbox"
+          id="theme-checkbox"
+          checked={darkMode}
+          onChange={handleToggle}
+          className="theme-checkbox"
+        />
+        <div className="toggle-slider">
+          <span className="toggle-icon">{darkMode ? "☀️" : "🌙"}</span>
+        </div>
+      </label>
     </nav>
   );
 }

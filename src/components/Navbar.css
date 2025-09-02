@@ -15,6 +15,7 @@ body.dark {
 
 /* Navbar */
 .navbar {
+  height: 3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,39 +25,117 @@ body.dark {
   transition: background 0.3s;
 }
 
-.logo {
-  display: flex; 
-  justify-content: space-around; 
-  gap: 10px;/* keeps image and text vertically aligned */
-}
-
 body.dark .navbar {
   background: #2c2c2c;
   border-bottom: 1px solid #444;
 }
 
 .logo {
+  display: flex;
+  align-items: center; /* keeps image and text vertically aligned */
+  gap: 10px;
+}
+
+.logo-img {
+  width: 50px;
+  height: 50px;
+}
+
+.logo h1 {
   font-size: 22px;
   font-weight: bold;
+  margin: 0; /* Remove default margin from h1 */
 }
 
-/* Toggle Button */
-.toggle-btn {
-  font-size: 20px;
-  padding: 6px 12px;
-  border: none;
-  border-radius: 50%;
+/* Theme Toggle (Accessibility-friendly) */
+.theme-toggle {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
   cursor: pointer;
-  background: #007bff;
-  color: white;
-  transition: background 0.3s;
 }
 
-.toggle-btn:hover {
-  background: #0056b3;
+.theme-checkbox {
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
-body.dark .toggle-btn {
-  background: #ffcc00;
-  color: black;
+.toggle-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 34px;
+  transition: 0.4s;
+}
+
+.toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+.theme-checkbox:checked + .toggle-slider {
+  background-color: #2196f3; /* Blue for dark mode toggle background */
+}
+
+.theme-checkbox:checked + .toggle-slider:before {
+  transform: translateX(26px);
+}
+
+body.dark .toggle-slider {
+  background-color: #555; /* Darker background for toggle slider in dark mode */
+}
+
+body.dark .theme-checkbox:checked + .toggle-slider {
+  background-color: #ffcc00; /* Yellow for toggle background when dark mode is active */
+}
+
+/* Toggle Icon (Sun/Moon) */
+.toggle-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  line-height: 1; /* Ensures icon sits well */
+  pointer-events: none; /* Allows clicks to pass through to the checkbox */
+  transition: opacity 0.4s ease;
+}
+
+.theme-checkbox:not(:checked) + .toggle-slider .toggle-icon {
+  left: calc(25% - 4px); /* Position moon icon to the left side */
+  opacity: 1;
+}
+
+.theme-checkbox:checked + .toggle-slider .toggle-icon {
+  left: calc(75% + 4px); /* Position sun icon to the right side */
+  opacity: 1;
+}
+
+/* Hide the icon that isn't active */
+.toggle-slider .toggle-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.theme-checkbox:not(:checked) + .toggle-slider .toggle-icon {
+  color: #fff; /* Moon color */
+}
+
+.theme-checkbox:checked + .toggle-slider .toggle-icon {
+  color: #000; /* Sun color */
 }
