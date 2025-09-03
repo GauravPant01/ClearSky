@@ -1,6 +1,6 @@
 🌤️ Weather Now 
 
-Weather Now is a simple and responsive weather application built with React.js, Css, Html.
+Weather Now is a simple and responsive weather application.
 
 🔍 Search for any city and instantly get live weather updates including temperature, wind speed, and conditions (☀️ Sunny, 🌧️ Rainy, ☁️ Cloudy, etc.).
 
@@ -8,6 +8,18 @@ Weather Now is a simple and responsive weather application built with React.js, 
 
 ⚡ Powered by the Open-Meteo API, no API key required.
 
+
+🛠️ Tech Stack
+
+React.js → Frontend framework (built with Vite for fast development & bundling)
+
+CSS → Custom styling (responsive UI + dark/light mode support)
+
+APIs:
+
+GeoDB Cities API → City search suggestions
+
+Open-Meteo API → Real-time weather data
 
 
 ✨ Features
