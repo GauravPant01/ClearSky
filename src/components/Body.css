@@ -30,6 +30,7 @@
   border: 1px solid #ccc;
   outline: none;
   height: 59px; /* matches button height */
+  
 }
 
 /* Optional: input red border on error */
@@ -70,6 +71,12 @@
   max-height: 180px;
   overflow-y: auto;
   font-size: 16px;
+}
+
+body.dark .suggestions {
+  background: #000;   /* solid black background */
+  color: #fff;
+  border-color: #555;
 }
 
 .suggestions li {

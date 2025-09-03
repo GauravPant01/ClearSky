@@ -30,7 +30,7 @@ const Body = () => {
           }
         );
 
-        const cityNames = response.data.data.map((c) => c.city); // only city name
+        const cityNames = response.data.data.map((c) => c.city); 
         setSuggestions(cityNames);
       } catch (error) {
         console.error("Error fetching cities:", error);
