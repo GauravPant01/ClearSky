@@ -1,30 +1,47 @@
- Weather Now - Weather App :
+🌤️ Weather Now 
 
-A simple weather web app built with React.js.
-Search for any city to get live weather updates like temperature, wind speed, and conditions (sunny, rainy, cloudy).
-Includes a dark mode toggle for better experience.
+Weather Now is a simple and responsive weather application built with React.js, Css, Html.
 
+🔍 Search for any city and instantly get live weather updates including temperature, wind speed, and conditions (☀️ Sunny, 🌧️ Rainy, ☁️ Cloudy, etc.).
 
+🌓 Comes with a dark mode toggle for a better viewing experience.
 
- Features :
-
-Search cities with live suggestions (via GeoDB Cities API)
-
-Real-time weather data (via Open-Meteo API)
-
-Light/Dark mode toggle (saved in localStorage)
-
-Responsive and easy-to-use UI
+⚡ Powered by the Open-Meteo API, no API key required.
 
 
 
- API Keys :
+✨ Features
 
-For getting cities recommendation when user enter city name -
- GeoDB Cities API → Requires a free key from RapidAPI (a8438f968cmsh1e9f55ffb991bf6p1d6a35jsnd756b78ac8fb)
+🔍 Smart city search – Get live city suggestions powered by the GeoDB Cities API.
 
-For getting weather data when search button is pressed -
-Open-Meteo → No key required , Open-Meteo needs a latitude and longitude for the location which we can get from the  GeoDB Cities API .
+🌦 Real-time weather data – Accurate temperature, wind speed, and conditions from the Open-Meteo API.
+
+🌓 Light/Dark mode toggle – Saves your theme preference in localStorage for a personalized experience.
+
+📱 Responsive UI – Clean and simple design that works seamlessly across devices.
+
+
+
+ 🔑 API Keys
+
+GeoDB Cities API
+
+Used to fetch live city suggestions as the user types.
+
+Requires a free API key from RapidAPI.
+
+Example key (a8438f968cmsh1e9f55ffb991bf6p1d6a35jsnd756b78ac8fb
+):
+
+
+
+Open-Meteo API
+
+Used to fetch real-time weather data.
+
+No API key required.
+
+Needs latitude & longitude, which we get from the GeoDB Cities API response.
 
 
 
