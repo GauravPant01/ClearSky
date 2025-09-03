@@ -24,7 +24,7 @@ const Body = () => {
           {
             params: { namePrefix: value, limit: 5 },
             headers: {
-              "x-rapidapi-key": "a8438f968cmsh1e9f55ffb991bf6p1d6a35jsnd756b78ac8fb",
+              "x-rapidapi-key": import.meta.env.VITE_GEODB_API_KEY,
               "x-rapidapi-host": "wft-geo-db.p.rapidapi.com",
             },
           }
@@ -59,7 +59,7 @@ const Body = () => {
         {
           params: { namePrefix: city, limit: 1 },
           headers: {
-            "x-rapidapi-key": "a8438f968cmsh1e9f55ffb991bf6p1d6a35jsnd756b78ac8fb",
+            "x-rapidapi-key": import.meta.env.VITE_GEODB_API_KEY,
             "x-rapidapi-host": "wft-geo-db.p.rapidapi.com",
           },
         }
