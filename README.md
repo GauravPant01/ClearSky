@@ -30,7 +30,7 @@ Used to fetch live city suggestions as the user types.
 
 Requires a free API key from RapidAPI.
 
-Example key (a8438f968cmsh1e9f55ffb991bf6p1d6a35jsnd756b78ac8fb
+Example key (a8438f968cmsh1e9f55ffb991bf6p1d6a35jsnd756b78a****
 ):
 
 
