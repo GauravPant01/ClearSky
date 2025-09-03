@@ -1,12 +1,82 @@
-# React + Vite
+🌤️ Weather Now 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Weather Now is a simple and responsive weather application built with React.js, Css, Html.
 
-Currently, two official plugins are available:
+🔍 Search for any city and instantly get live weather updates including temperature, wind speed, and conditions (☀️ Sunny, 🌧️ Rainy, ☁️ Cloudy, etc.).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🌓 Comes with a dark mode toggle for a better viewing experience.
 
-## Expanding the ESLint configuration
+⚡ Powered by the Open-Meteo API, no API key required.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+
+✨ Features
+
+🔍 Smart city search – Get live city suggestions powered by the GeoDB Cities API.
+
+🌦 Real-time weather data – Accurate temperature, wind speed, and conditions from the Open-Meteo API.
+
+🌓 Light/Dark mode toggle – Saves your theme preference in localStorage for a personalized experience.
+
+📱 Responsive UI – Clean and simple design that works seamlessly across devices.
+
+
+
+ 🔑 API Keys
+
+GeoDB Cities API
+
+Used to fetch live city suggestions as the user types.
+
+Requires a free API key from RapidAPI.
+
+Example key (a8438f968cmsh1e9f55ffb991bf6p1d6a35jsnd756b78ac8fb
+):
+
+
+
+Open-Meteo API
+
+Used to fetch real-time weather data.
+
+No API key required.
+
+Needs latitude & longitude, which we get from the GeoDB Cities API response.
+
+
+
+
+
+Folder Structure :
+
+weather-app/
+├── public/                   
+│   ├── vite.svg
+│   └── weathericon.jpg       
+│
+├── src/                      
+│   ├── assets/               
+│   │   ├── Body.css          
+│   │   ├── Navbar.css        
+│   │   ├── react.svg
+│   │   └── searchIcon.webp   
+│   │
+│   ├── components/           
+│   │   ├── Body.jsx          
+│   │   └── Navbar.jsx        
+│   │
+│   ├── utils/                
+│   │   └── weatherCodes.js   
+│   │
+│   ├── App.jsx               
+│   ├── index.css             
+│   └── main.jsx              
+│
+├── .gitignore
+├── README.md                 
+├── eslint.config.js          
+├── index.html                
+├── package-lock.json
+├── package.json              
+└── vite.config.js            
+
