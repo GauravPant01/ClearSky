@@ -1,12 +1,37 @@
-# React + Vite
+ Weather Now - Weather App :
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple weather web app built with React.js.
+Search for any city to get live weather updates like temperature, wind speed, and conditions (sunny, rainy, cloudy).
+Includes a dark mode toggle for better experience.
 
-Currently, two official plugins are available:
+ Features :
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Search cities with live suggestions (via GeoDB Cities API)
 
-## Expanding the ESLint configuration
+Real-time weather data (via Open-Meteo API)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Light/Dark mode toggle (saved in localStorage)
+
+Responsive and easy-to-use UI
+
+
+ API Keys :
+
+For getting cities recommendation when user enter city name -
+ GeoDB Cities API → Requires a free key from RapidAPI (a8438f968cmsh1e9f55ffb991bf6p1d6a35jsnd756b78ac8fb)
+
+For getting weather data when search button is pressed
+Open-Meteo → No key required , Open-Meteo needs a latitude and longitude for the location which we can get from the  GeoDB Cities API .
+
+
+
+
+
+Folder Structure
+src/
+ ├── assets/          # images/icons
+ ├── components/      # Navbar, Body, weatherCodes.js
+ ├── Body.css
+ ├── Navbar.css
+ ├── App.js
+ └── index.js
