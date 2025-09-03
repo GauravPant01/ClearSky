@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import searchIcon from "../assets/searchicon.webp";
 import weatherCodes from "../utils/weatherCodes";
-import "./Body.css";
+import "../assets/Body.css";
 
 const Body = () => {
   const [city, setCity] = useState("");

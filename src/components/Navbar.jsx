@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./Navbar.css";
+import "../assets/Navbar.css";
 
 export default function Navbar() {
   const [darkMode, setDarkMode] = useState(false);
@@ -35,7 +35,7 @@ export default function Navbar() {
     <nav className="navbar">
       <div className="logo">
         <img src="/weathericon.jpg" alt="Weather Icon" className="logo-img" />
-        <h1>ClearSky</h1>
+        <h1>Weather Now</h1>
       </div>
       <label className="theme-toggle" htmlFor="theme-checkbox">
         <input
